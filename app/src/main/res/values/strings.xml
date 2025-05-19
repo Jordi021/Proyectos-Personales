@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">Gestor de Proyectos Personales</string>
+
+    <string name="confirmar_eliminacion">Confirmar Eliminación</string>
+    <string name="mensaje_confirmar_eliminacion">¿Estás seguro de que deseas eliminar este elemento?</string>
+    <string name="si">Sí</string>
+    <string name="no">No</string>
+
+    <string name="title_activity_main">Mis Proyectos</string>
+    <string name="title_activity_project_detail">Detalles del Proyecto</string>
+    <string name="title_activity_task_detail">Detalles de la Tarea</string>
+    <string name="title_activity_settings">Configuración</string>
+    <string name="title_activity_add_project">Nuevo Proyecto</string>
+    <string name="title_activity_edit_project">Editar Proyecto</string>
+    <string name="title_activity_add_task">Nueva Tarea</string>
+    <string name="title_activity_edit_task">Editar Tarea</string>
+
+    <string name="action_settings">Configuración</string>
+    <string name="action_add">Añadir</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_view_details">Ver Detalles</string>
+    <string name="action_mark_as_complete">Marcar como Completado</string>
+    <string name="action_mark_as_incomplete">Marcar como Pendiente</string>
+    <string name="action_filter">Filtrar</string>
+    <string name="action_sort">Ordenar</string>
+    <string name="action_share">Compartir</string>
+    <string name="action_confirm">Confirmar</string>
+    <string name="action_back">Volver</string>
+
+    <string name="button_add_project">Nuevo Proyecto</string>
+    <string name="button_add_task">Nueva Tarea</string>
+    <string name="button_view_tasks">Ver Tareas</string>
+    <string name="button_ok">Aceptar</string>
+    <string name="button_yes">Sí</string>
+    <string name="button_no">No</string>
+
+    <string name="hint_project_name">Nombre del Proyecto</string>
+    <string name="hint_project_description">Descripción (opcional)</string>
+    <string name="hint_project_start_date">Fecha de Inicio</string>
+    <string name="hint_project_end_date">Fecha de Fin (opcional)</string>
+    <string name="hint_project_category">Categoría (opcional)</string>
+
+    <string name="hint_task_name">Nombre de la Tarea</string>
+    <string name="hint_task_description">Descripción (opcional)</string>
+    <string name="hint_task_due_date">Fecha Límite</string>
+    <string name="hint_task_notes">Notas adicionales (opcional)</string>
+
+    <string name="hint_search_projects">Buscar proyectos...</string>
+    <string name="hint_search_tasks">Buscar tareas...</string>
+
+    <string name="label_project_name">Proyecto:</string>
+    <string name="label_project_description">Descripción:</string>
+    <string name="label_project_start_date">Inicio:</string>
+    <string name="label_project_end_date">Fin:</string>
+    <string name="label_project_status">Estado:</string>
+    <string name="label_project_category">Categoría:</string>
+    <string name="label_no_projects">No hay proyectos aún. ¡Añade uno!</string>
+
+    <string name="label_task_name">Tarea:</string>
+    <string name="label_task_description">Descripción:</string>
+    <string name="label_task_due_date">Fecha Límite:</string>
+    <string name="label_task_priority">Prioridad:</string>
+    <string name="label_task_status">Estado:</string>
+    <string name="label_task_project_assigned">Proyecto Asignado:</string>
+    <string name="label_no_tasks">No hay tareas para este proyecto. ¡Añade una!</string>
+    <string name="label_no_tasks_yet">No hay tareas aún.</string>
+
+    <string name="priority_high">Alta</string>
+    <string name="priority_medium">Media</string>
+    <string name="priority_low">Baja</string>
+    <string name="label_select_priority">Seleccionar Prioridad</string>
+
+    <string name="status_pending">Pendiente</string>
+    <string name="status_in_progress">En Progreso</string>
+    <string name="status_completed">Completado</string>
+    <string name="status_on_hold">En Espera</string>
+    <string name="status_cancelled">Cancelado</string>
+    <string name="label_select_status">Seleccionar Estado</string>
+
+    <string name="message_project_created_success">Proyecto creado exitosamente.</string>
+    <string name="message_project_updated_success">Proyecto actualizado exitosamente.</string>
+    <string name="message_project_deleted_success">Proyecto eliminado exitosamente.</string>
+    <string name="message_task_created_success">Tarea creada exitosamente.</string>
+    <string name="message_task_updated_success">Tarea actualizada exitosamente.</string>
+    <string name="message_task_deleted_success">Tarea eliminada exitosamente.</string>
+    <string name="message_error_generic">Ocurrió un error. Inténtalo de nuevo.</string>
+    <string name="message_error_saving_project">Error al guardar el proyecto.</string>
+    <string name="message_error_saving_task">Error al guardar la tarea.</string>
+    <string name="message_error_deleting_project">Error al eliminar el proyecto.</string>
+    <string name="message_error_deleting_task">Error al eliminar la tarea.</string>
+    <string name="message_confirm_delete_project">¿Estás seguro de que deseas eliminar este proyecto y todas sus tareas asociadas?</string>
+    <string name="message_confirm_delete_task">¿Estás seguro de que deseas eliminar esta tarea?</string>
+    <string name="message_fields_required">Por favor, completa los campos requeridos.</string>
+    <string name="message_no_data_to_display">No hay datos para mostrar.</string>
+    <string name="message_loading_data">Cargando datos...</string>
+    <string name="message_due_date_passed">La fecha límite ha pasado.</string>
+    <string name="message_project_completed">¡Proyecto completado!</string>
+    <string name="message_task_completed">¡Tarea completada!</string>
+
+    <string name="menu_projects">Proyectos</string>
+    <string name="menu_tasks">Tareas</string>
+    <string name="menu_calendar_view">Vista de Calendario</string>
+    <string name="menu_settings">Configuración</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_logout">Cerrar Sesión</string>
+    <string name="menu_sort_by_name">Ordenar por Nombre</string>
+    <string name="menu_sort_by_date">Ordenar por Fecha</string>
+    <string name="menu_sort_by_priority">Ordenar por Prioridad</string>
+    <string name="menu_filter_all">Todos</string>
+    <string name="menu_filter_pending">Pendientes</string>
+    <string name="menu_filter_in_progress">En Progreso</string>
+    <string name="menu_filter_completed">Completados</string>
+
+    <string name="settings_notifications_title">Notificaciones</string>
+    <string name="settings_enable_reminders">Habilitar Recordatorios</string>
+    <string name="settings_default_reminder_time">Hora de Recordatorio Predeterminada</string>
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_select_theme">Seleccionar Tema</string>
+    <string name="settings_dark_mode">Modo Oscuro</string>
+    <string name="settings_light_mode">Modo Claro</string>
+    <string name="settings_system_default">Predeterminado del Sistema</string>
+    <string name="settings_data_sync_title">Sincronización de Datos</string>
+    <string name="settings_enable_cloud_sync">Habilitar Sincronización en la Nube</string>
+
+    <string name="desc_add_new_project_button">Botón para añadir un nuevo proyecto</string>
+    <string name="desc_add_new_task_button">Botón para añadir una nueva tarea</string>
+    <string name="desc_project_icon">Icono de proyecto</string>
+    <string name="desc_task_icon">Icono de tarea</string>
+    <string name="desc_priority_indicator">Indicador de prioridad</string>
+
+    <string-array name="project_status_options">
+        <item>@string/status_pending</item>
+        <item>@string/status_in_progress</item>
+        <item>@string/status_completed</item>
+        <item>@string/status_on_hold</item>
+        <item>@string/status_cancelled</item>
+    </string-array>
+
+    <string-array name="task_priority_options">
+        <item>@string/priority_high</item>
+        <item>@string/priority_medium</item>
+        <item>@string/priority_low</item>
+    </string-array>
+        <!-- Other strings -->
+    <string name="sin_actividades">No activities found.</string>
+    <string-array name="estados_actividad">
+        <item>Pendiente</item>
+        <item>En Progreso</item>
+        <item>Completada</item>
+    </string-array>
+    <string name="nombre_actividad">Nombre de la actividad</string>
+    <string name="descripcion_actividad">Descripción de la actividad (opcional)</string>
+    <string name="fecha_inicio">Fecha de inicio</string>
+    <string name="fecha_fin">Fecha de fin</string>
+    <string name="estado_actividad">Estado de la actividad:</string>
+    <string name="guardar_actividad">Guardar Actividad</string>
+
+    <string name="nombre_proyecto">Nombre del proyecto</string>
+    <string name="descripcion_proyecto">Descripción del proyecto (opcional)</string>
+    <string name="guardar_proyecto">Guardar Proyecto</string>
+    <string name="nombre_usuario">Nombre de usuario o correo</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="crear_cuenta">¿No tienes cuenta? Crea una aquí</string>
+    <string name="recuperar_contrasena_simulado">¿Olvidaste tu contraseña?</string>
+    <string name="sin_proyectos">No hay proyectos para mostrar.</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="email">Correo electrónico</string>
+    <string name="confirmar_contrasena">Confirmar contraseña</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="guardar">Guardar</string>
+    <string name="titulo_proyectos">Your Project Title</string>
+</resources>

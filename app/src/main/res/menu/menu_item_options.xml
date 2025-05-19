@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_ver_actividades_item"
+        android:title="Ver Actividades"/>
+    <item android:id="@+id/action_editar_item"
+        android:title="@string/editar" />
+    <item android:id="@+id/action_eliminar_item"
+        android:title="@string/eliminar" />
+</menu>
