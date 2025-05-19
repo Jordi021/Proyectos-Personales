@@ -8,7 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="chip_planificado">#FFC107</color> <color name="chip_text_planificado">#000000</color>
+    <color name="chip_planificado">#FFC107</color>
+    <color name="chip_text_planificado">#000000</color>
     <color name="chip_en_ejecucion">#2196F3</color> <color name="chip_text_en_ejecucion">#FFFFFF</color>
-    <color name="chip_realizado">#4CAF50</color> <color name="chip_text_realizado">#FFFFFF</color>
+    <color name="chip_realizado">#4CAF50</color>
+    <color name="chip_text_realizado">#FFFFFF</color>
+
+    <color name="app_azul_principal">#0cb7f2</color>
+    <color name="app_azul_secundario">#53d4ff</color>
+    <color name="app_azul_claro1">#81e3ff</color>
+    <color name="app_azul_claro2">#bceeff</color>
+    <color name="app_azul_muy_claro">#def7ff</color>
+    <color name="app_texto_sobre_azul_principal">#FFFFFFFF</color>
+    <color name="app_texto_sobre_azul_secundario">#FF000000</color>
 </resources>

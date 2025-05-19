@@ -1,6 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.PersonalProjectsJP" parent="Theme.Material3.DayNight.NoActionBar">
-    </style>
+        <item name="colorPrimary">@color/app_azul_principal</item>
+
+        <item name="colorPrimaryVariant">@color/app_azul_principal</item> <item name="colorOnPrimary">@color/app_texto_sobre_azul_principal</item> <item name="colorSecondary">@color/app_azul_secundario</item>
+
+        <item name="colorSecondaryVariant">@color/app_azul_claro1</item> <item name="colorOnSecondary">@color/app_texto_sobre_azul_secundario</item> <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">@color/app_azul_muy_claro</item> <item name="colorSurface">@color/white</item> <item name="colorOnSurface">@color/black</item> <item name="colorError">#B00020</item> <item name="colorOnError">@color/white</item>
+
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">#757575</item> </style>
 
     <style name="Theme.PersonalProjectsJP" parent="Base.Theme.PersonalProjectsJP" />
 </resources>

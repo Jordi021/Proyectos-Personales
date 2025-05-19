@@ -16,6 +16,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.personalprojects.db.UsuariosDAO;
 import com.personalprojects.model.Usuario;
 import com.personalprojects.util.SessionManager;
+import android.text.Html;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -96,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etNombreUsuarioRecuperar = dialogView.findViewById(R.id.editTextNombreUsuarioRecuperar);
         final EditText etEmailRecuperar = dialogView.findViewById(R.id.editTextEmailRecuperar);
 
-        builder.setTitle("Recuperar Contraseña (Simulación)");
+        builder.setTitle("Recuperar Contraseña");
         builder.setPositiveButton("Buscar", (dialog, which) -> {
             String nombreUsuario = etNombreUsuarioRecuperar.getText().toString().trim();
             String email = etEmailRecuperar.getText().toString().trim();
@@ -108,9 +109,10 @@ public class LoginActivity extends AppCompatActivity {
 
             String contrasenaRecuperada = usuariosDAO.obtenerContrasenaPorNombreUsuarioYEmail(nombreUsuario, email);
             if (contrasenaRecuperada != null) {
+                String mensaje = "Tu contraseña es: <b>" + contrasenaRecuperada + "</b>";
                 new AlertDialog.Builder(this)
                         .setTitle("Contraseña Encontrada")
-                        .setMessage("Tu contraseña es: " + contrasenaRecuperada + "\n(En una app real, esto se manejaría de forma segura, ej. email con link de reseteo).")
+                        .setMessage(Html.fromHtml(mensaje, Html.FROM_HTML_MODE_LEGACY)) // Usar Html.fromHtml
                         .setPositiveButton("Entendido", null)
                         .show();
             } else {

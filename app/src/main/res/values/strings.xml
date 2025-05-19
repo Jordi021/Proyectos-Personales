@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Gestor de Proyectos Personales</string>
+    <string name="app_name">Proyectos Personales</string>
 
     <string name="confirmar_eliminacion">Confirmar Eliminación</string>
     <string name="mensaje_confirmar_eliminacion">¿Estás seguro de que deseas eliminar este elemento?</string>
@@ -176,7 +176,7 @@
     <string name="eliminar">Eliminar</string>
     <string name="logout">Cerrar Sesión</string>
     <string name="guardar">Guardar</string>
-    <string name="titulo_proyectos">Your Project Title</string>
+    <string name="titulo_proyectos">Mi Gestor de Proyectos</string>
     <string name="mensaje_confirmar_eliminacion_proyecto">¿Estás seguro de que quieres eliminar el proyecto \"%1$s\"? Esto también eliminará todas sus actividades asociadas.</string>
     <string name="mensaje_confirmar_eliminacion_actividad">¿Estás seguro de que deseas eliminar la actividad \"%1$s\"?</string>
     <string name="no_hay_actividades">No hay actividades para este proyecto. ¡Añade una nueva!</string>
