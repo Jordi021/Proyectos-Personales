@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log; // IMPORTACIÓN NECESARIA PARA LOGCAT
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
@@ -16,6 +17,9 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class EditorProyectoActivity extends AppCompatActivity {
+
+    // Definimos una etiqueta (TAG) para nuestros mensajes de Logcat
+    private static final String TAG = "EditorProyectoActivity";
 
     private TextInputEditText editTextNombre, editTextDescripcion, editTextFechaInicio, editTextFechaFin;
     private Button buttonGuardar;
@@ -59,6 +63,7 @@ public class EditorProyectoActivity extends AppCompatActivity {
         if (idUsuarioActual == -1 && idProyectoEditar == -1) {
             // Error crítico, no se puede crear ni editar sin un ID de usuario o proyecto
             Toast.makeText(this, "Error: Falta información del usuario.", Toast.LENGTH_LONG).show();
+            Log.e(TAG, "Error crítico: Falta ID_USUARIO y no se está editando un proyecto. idUsuarioActual: " + idUsuarioActual + ", idProyectoEditar: " + idProyectoEditar);
             finish();
             return;
         }
@@ -72,6 +77,7 @@ public class EditorProyectoActivity extends AppCompatActivity {
 
     private void cargarDatosProyecto() {
         if (idProyectoEditar != -1) {
+            Log.d(TAG, "Cargando datos para el proyecto ID: " + idProyectoEditar);
             Proyecto proyecto = proyectosDAO.getProyectoPorId(idProyectoEditar);
             if (proyecto != null) {
                 editTextNombre.setText(proyecto.getNombre());
@@ -79,6 +85,7 @@ public class EditorProyectoActivity extends AppCompatActivity {
                 editTextFechaInicio.setText(proyecto.getFechaInicio());
                 editTextFechaFin.setText(proyecto.getFechaFin());
                 idUsuarioActual = proyecto.getIdUsuario(); // Aseguramos el ID de usuario
+                Log.i(TAG, "Proyecto cargado: " + proyecto.getNombre());
 
                 // Parsear fechas para los Calendar
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
@@ -88,10 +95,12 @@ public class EditorProyectoActivity extends AppCompatActivity {
                     if (proyecto.getFechaFin() != null && !proyecto.getFechaFin().isEmpty())
                         calendarioFin.setTime(sdf.parse(proyecto.getFechaFin()));
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    Log.e(TAG, "Error al parsear fechas durante la carga del proyecto.", e);
+                    e.printStackTrace(); // También mantenemos el stack trace por si acaso
                 }
             } else {
                 Toast.makeText(this, "Error al cargar el proyecto para editar.", Toast.LENGTH_SHORT).show();
+                Log.w(TAG, "No se pudo encontrar el proyecto con ID: " + idProyectoEditar + " para editar.");
                 finish();
             }
         }
@@ -126,6 +135,7 @@ public class EditorProyectoActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(nombre)) {
             editTextNombre.setError("Nombre del proyecto es requerido.");
             editTextNombre.requestFocus();
+            Log.w(TAG, "Intento de guardar proyecto sin nombre.");
             return;
         }
         // Validaciones adicionales (ej. fecha fin no puede ser antes que fecha inicio)
@@ -134,29 +144,39 @@ public class EditorProyectoActivity extends AppCompatActivity {
                 editTextFechaFin.setError("La fecha de fin no puede ser anterior a la fecha de inicio.");
                 Toast.makeText(this, "La fecha de fin no puede ser anterior a la fecha de inicio.", Toast.LENGTH_LONG).show();
                 editTextFechaFin.requestFocus();
+                Log.w(TAG, "Validación fallida: Fecha de fin (" + fechaFin + ") es anterior a fecha de inicio (" + fechaInicio + ").");
                 return;
             }
         }
 
-
         Proyecto proyecto;
         if (idProyectoEditar == -1) { // Crear nuevo
+            Log.d(TAG, "Intentando crear nuevo proyecto para usuario ID: " + idUsuarioActual);
             proyecto = new Proyecto(nombre, descripcion, fechaInicio.isEmpty() ? null : fechaInicio, fechaFin.isEmpty() ? null : fechaFin, idUsuarioActual);
             long resultado = proyectosDAO.crearProyecto(proyecto);
             if (resultado != -1) {
                 Toast.makeText(this, "Proyecto creado exitosamente.", Toast.LENGTH_SHORT).show();
+                // Mensaje por consola (Logcat)
+                Log.i(TAG, "Proyecto creado exitosamente. ID: " + resultado + ", Nombre: " + nombre + ", Usuario ID: " + idUsuarioActual);
                 finish();
             } else {
                 Toast.makeText(this, "Error al crear el proyecto.", Toast.LENGTH_SHORT).show();
+                // Mensaje por consola (Logcat)
+                Log.e(TAG, "Error al crear el proyecto. Nombre: " + nombre + ", Usuario ID: " + idUsuarioActual);
             }
         } else { // Actualizar existente
+            Log.d(TAG, "Intentando actualizar proyecto ID: " + idProyectoEditar);
             proyecto = new Proyecto(idProyectoEditar, nombre, descripcion, fechaInicio.isEmpty() ? null : fechaInicio, fechaFin.isEmpty() ? null : fechaFin, idUsuarioActual);
             int resultado = proyectosDAO.actualizarProyecto(proyecto);
             if (resultado > 0) {
                 Toast.makeText(this, "Proyecto actualizado exitosamente.", Toast.LENGTH_SHORT).show();
+                // Mensaje por consola (Logcat)
+                Log.i(TAG, "Proyecto actualizado exitosamente. ID: " + idProyectoEditar + ", Nombre: " + nombre + ". Filas afectadas: " + resultado);
                 finish();
             } else {
                 Toast.makeText(this, "Error al actualizar el proyecto.", Toast.LENGTH_SHORT).show();
+                // Mensaje por consola (Logcat)
+                Log.e(TAG, "Error al actualizar el proyecto. ID: " + idProyectoEditar + ", Nombre: " + nombre + ". Filas afectadas: " + resultado);
             }
         }
     }
