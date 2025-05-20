@@ -4,14 +4,6 @@
 **Fecha:** `19/05/2025`
 **Carrera:** `Ingeniería en Software`
 
-## URL del Repositorio GIT
-
-* **URL:** `https://github.com/Jordi021/Proyectos-Personales.git`
-
-## URL del Video Demostrativo
-
-* **URL:** `https://utneduec-my.sharepoint.com/:v:/g/personal/jspuruncajasc_utn_edu_ec/EXM8SeCAFU5Dk87qn39b0mYBgRGIwGMUyvBgp-kn7hTXSw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=MofoNy`
-
 ## Introducción
 
 La aplicación "Proyectos Personales" ha sido desarrollada como parte de la materia Aplicaciones Móviles. Su objetivo principal es ofrecer a los usuarios una herramienta intuitiva y eficiente para la gestión de sus proyectos personales y las actividades asociadas a estos. La aplicación permite llevar un control detallado desde la creación de un proyecto hasta la finalización de sus tareas, visualizando el progreso en tiempo real. Todas las funcionalidades se basan en el almacenamiento local de datos mediante SQLite, garantizando la disponibilidad de la información sin necesidad de conexión a internet.
@@ -25,7 +17,7 @@ Al iniciar la aplicación, el usuario es recibido por una pantalla de carga mome
 * Si el usuario ya ha iniciado sesión previamente, es dirigido automáticamente a la pantalla de "Mis Proyectos".
 * En caso contrario, se le presenta la "Pantalla de Inicio de Sesión".
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/1.png" alt="Pantalla de Carga" width="300"/>
+<img src="docs/images/1.png" alt="Pantalla de Carga" width="300"/>
 
 ### 2. Gestión de Usuarios
 
@@ -38,9 +30,9 @@ Esta pantalla es el punto de acceso a la aplicación.
 * Desde aquí, el usuario puede navegar a la pantalla de "Registro" si aún no tiene una cuenta.
 * También se ofrece una opción de "Recuperar Contraseña". Al seleccionarla, se solicita al usuario su nombre de usuario y correo electrónico; si coinciden con un registro existente, la aplicación muestra la contraseña almacenada (simulación de recuperación).
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/2.png" alt="Pantalla de Inicio de Sesión" width="300"/>
+<img src="docs/images/2.png" alt="Pantalla de Inicio de Sesión" width="300"/>
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/3.png" alt="Diálogo de Recuperar Contraseña" width="300"/>
+<img src="docs/images/3.png" alt="Diálogo de Recuperar Contraseña" width="300"/>
 
 #### b. Pantalla de Registro de Nuevos Usuarios
 Permite a los nuevos usuarios crear una cuenta.
@@ -49,7 +41,7 @@ Permite a los nuevos usuarios crear una cuenta.
 * Una vez validados los datos, se crea el nuevo usuario y se almacena su información.
 * Tras el registro exitoso, el usuario es redirigido a la "Pantalla de Inicio de Sesión" para que pueda acceder con sus nuevas credenciales.
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/4.png" alt="Pantalla de Registro de Usuarios" width="300"/>
+<img src="docs/images/4.png" alt="Pantalla de Registro de Usuarios" width="300"/>
 
 ### 3. Módulo de Proyectos
 
@@ -66,9 +58,8 @@ Es la pantalla principal una vez que el usuario ha iniciado sesión.
     * **Eliminar:** Solicita confirmación al usuario y, si se acepta, elimina el proyecto y todas sus actividades asociadas de la base de datos.
 * La barra de herramientas superior (Toolbar) incluye una opción para **Cerrar Sesión**, que finaliza la sesión actual y redirige al usuario a la "Pantalla de Inicio de Sesión".
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/6.png" alt="Menú de Opciones del Proyecto" width="300"/>
-
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/7.png" alt="Pantalla de Crear/Editar Proyecto" width="300"/>
+<img src="docs/images/5.png" alt="Listado de Proyectos" width="300"/> 
+<img src="docs/images/6.png" alt="Menú de Opciones del Proyecto" width="300"/>
 
 #### b. Pantalla de Crear/Editar Proyecto
 Esta pantalla se utiliza tanto para la creación de nuevos proyectos como para la modificación de los existentes.
@@ -79,8 +70,7 @@ Esta pantalla se utiliza tanto para la creación de nuevos proyectos como para l
     * **Fecha de Fin** (opcional, seleccionable mediante un calendario emergente)
 * Al guardar, la información se almacena o actualiza en la base de datos local. La aplicación valida que la fecha de fin no sea anterior a la fecha de inicio.
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/8.png" alt="Listado de Actividades por Proyecto" width="300"/>
-
+<img src="docs/images/7.png" alt="Pantalla de Crear/Editar Proyecto" width="300"/>
 ### 4. Módulo de Actividades por Proyecto
 
 #### a. Pantalla de Listado de Actividades del Proyecto
@@ -94,10 +84,8 @@ Se accede a esta pantalla al seleccionar "Ver Actividades" en un proyecto espec�
     * **Editar Actividad:** Abre la pantalla "Crear/Editar Actividad" con los datos de la actividad seleccionada.
     * **Eliminar Actividad:** Solicita confirmación y, si se acepta, elimina la actividad.
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/9.png" alt="Menú de Opciones de la Actividad" width="300"/>
-
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/10.png" alt="Pantalla de Crear/Editar Actividad" width="300"/>
-
+<img src="docs/images/8.png" alt="Listado de Actividades por Proyecto" width="300"/>
+<img src="docs/images/9.png" alt="Menú de Opciones de la Actividad" width="300"/>
 #### b. Pantalla de Crear/Editar Actividad
 Permite la creación o modificación de actividades dentro de un proyecto.
 * Los campos a gestionar son:
@@ -108,8 +96,7 @@ Permite la creación o modificación de actividades dentro de un proyecto.
     * **Estado:** Seleccionable de una lista desplegable ("Pendiente" como estado por defecto para nuevas actividades, "En Progreso", "Realizado").
 * La aplicación valida que la fecha de fin no sea anterior a la de inicio. Al guardar, los datos se almacenan o actualizan.
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/11.png" alt="Descripción de la imagen 11" width="300"/>
-
+<img src="docs/images/10.png" alt="Pantalla de Crear/Editar Actividad" width="300"/>
 ## Diseño de la Base de Datos (SQLite)
 
 La persistencia de los datos de la aplicación se gestiona mediante una base de datos SQLite local. El diseño de la base de datos se centra en tres entidades principales: Usuarios, Proyectos y Actividades, con relaciones claramente definidas para mantener la integridad de los datos.
@@ -130,5 +117,4 @@ La persistencia de los datos de la aplicación se gestiona mediante una base de 
 
 **Diagrama Entidad-Relación (o Esquema Visual):**
 
-<img src="file:///D:/Projects/AndroidStudio/PersonalProjectsGe/docs/images/db.png" alt="Diagrama de Base de Datos" width="500"/>
-
+<img src="docs/images/db.png" alt="Diagrama de Base de Datos" width="500"/>
